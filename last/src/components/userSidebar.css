@@ -1,0 +1,30 @@
+.sidebar {
+    width: 300px;
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar.collapsed .profile h2,
+.sidebar.collapsed ul li a {
+    display: none;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 10px;
+    left: 310px;
+    background: #480572;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.sidebar.collapsed + .main-content {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+}

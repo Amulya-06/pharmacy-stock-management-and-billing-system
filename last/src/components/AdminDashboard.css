@@ -1,0 +1,262 @@
+/* Main Layout */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.dashboard-content {
+  margin-left: 400px;
+  padding: 2rem;
+  width: calc(100% - 250px);
+  transition: all 0.3s;
+}
+
+/* Header */
+.dashboard-content h1 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Search and Settings */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.controls input[type="text"] {
+  padding: 0.75rem 1rem;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.settings {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.settings label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.settings input {
+  padding: 0.5rem;
+  width: 70px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Alert Cards */
+.alert-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card.active {
+  background: #e3f2fd;
+  border: 2px solid #2196f3;
+}
+
+.card h3 {
+  margin: 0 0 0.75rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.alert { color: #ff9800; }
+.warning { color: #ff5722; }
+.danger { color: #f44336; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  gap: 0.5rem;
+}
+
+.tabs button {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  color: #555;
+}
+
+.tabs button:hover {
+  background: #f1f1f1;
+}
+
+.tabs button.active {
+  border-bottom-color: #2196f3;
+  color: #2196f3;
+  font-weight: 600;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #444;
+  position: sticky;
+  top: 0;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Status Indicators */
+.low-stock { color: #ff9800; font-weight: bold; }
+.near-expiry { color: #ff5722; font-weight: bold; }
+.expired { color: #f44336; font-weight: bold; }
+
+/* Action Buttons */
+.edit-btn, .delete-btn {
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-btn:hover { background-color: #3d8b40; }
+.delete-btn:hover { background-color: #d32f2f; }
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dashboard-content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .alert-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+  
+  .controls input[type="text"] {
+    width: 100%;
+  }
+  
+  .settings {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .alert-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .tabs button {
+    white-space: nowrap;
+  }
+}
+.threshold-controls{
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 15px;
+}
+.profit-loss-summary{
+
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

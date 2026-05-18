@@ -1,0 +1,97 @@
+/* Overall container styling */
+
+.add-product-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the form container */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+  margin-left: 650px;
+  /* margin-top: 130px; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  text-align: left;
+}
+
+/* Page background styling */
+body {
+  background-color: #f4f4f8; /* Soothing light grey background for the entire page */
+  font-family: "Arial", sans-serif; /* Clean, readable font */
+  margin: 100px;
+  padding: 100px;
+
+}
+
+/* Form heading styling */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Darker color for the heading */
+  font-size: 24px; /* Slightly larger font size */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Label styling */
+label {
+  margin-bottom: 5px; /* Spacing between label and input */
+  color: #34495e; /* Muted dark color for text */
+  font-weight: bold;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Input styling */
+form input,
+form select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; /* Ensures consistent padding */
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Button styling */
+form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #8341bc !important;/* Green background color for the button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.02); /* Slight enlargement on hover */
+}
+
+/* Success message styling */
+.success-message {
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Error message styling */
+.error-text {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}

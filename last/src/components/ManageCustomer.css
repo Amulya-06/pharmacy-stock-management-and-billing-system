@@ -1,0 +1,144 @@
+/* Container styling */
+.manage-customer-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    max-width: 1200px; /* Increased container width */
+    /* margin-top: 50px; Center the container with auto margin */
+    margin-left:350px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+}
+
+/* Title styling */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px; /* Increased font size for better visibility */
+    color: #343a40;
+    font-weight: bold;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-bar input,
+.search-bar button {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Specific styles for input fields */
+.search-bar input {
+    flex: 1;
+    min-width: 250px; /* Slightly wider minimum width */
+}
+
+/* Button styling */
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Table styling */
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header styling */
+.customer-table th,
+.customer-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Table header background and text */
+.customer-table th {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Table rows styling */
+.customer-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.customer-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button styles for editing and deleting customers */
+.edit-btn,
+.delete-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Edit button style */
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 2px; /* Add space between buttons */
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Delete button style */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .customer-table th,
+    .customer-table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .manage-customer-container {
+        padding: 20px;
+    }
+}

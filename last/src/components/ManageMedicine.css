@@ -1,0 +1,156 @@
+/* ManageProduct.css */
+.manage-product-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin-left:360px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #343a40;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.product-table th,
+.product-table td {
+  padding: 8px 10px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  font-size: 13px;
+  height: 36px; /* Fixed row height */
+}
+
+.product-table th {
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Action buttons container */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+/* Compact buttons */
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Form inputs */
+.product-table input,
+.product-table select,
+.product-table textarea {
+  width: 90%;
+  padding: 5px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.product-table textarea {
+  height: 36px;
+  resize: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .manage-product-container {
+    min-width: auto;
+    width: 98%;
+    padding: 15px;
+  }
+  
+  .product-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-table th,
+  .product-table td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  
+  .search-bar input,
+  .search-bar button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}

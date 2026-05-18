@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import Modal from "react-modal";
 import API from "../api";
+import Modal from "react-modal";
 import "./AddPurchase.css";
 import debounce from "lodash.debounce";
 

@@ -60,7 +60,7 @@ const AddProduct = () => {
     if (validateForm()) {
       try {
         const response = await axios.post(`${API}/api/products`, formData);
-  
+
         setMessage(response.data.message);
         setFormData({
           productName: "",

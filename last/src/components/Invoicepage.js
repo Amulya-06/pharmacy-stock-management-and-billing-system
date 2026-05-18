@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API from "../api";
 import { QRCodeCanvas } from 'qrcode.react';
 import './InvoicePage.css';
 import AddCustomer from './AddCustomer';
-import API from '../api';
 
 const formatCurrency = (value) => {
   const num = Number(value);

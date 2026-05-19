@@ -26,7 +26,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: ["http://localhost:3000", "http://localhost:3001", "https://pms-e2ex.onrender.com"] }));
+app.use(cors({ origin: ["http://localhost:3000", "http://localhost:3001", "https://pharmacy-stock-management-and-billing.onrender.com"] }));
 app.use(express.json());
 app.use(bodyParser.json());
 
@@ -44,7 +44,7 @@ app.use('/api/stocks', stockRoutes);
 
 // Add our new user routes
 // Ensure correct user routes registration
-app.use('/api/users', userRoutes); 
+app.use('/api/users', userRoutes);
 app.use('/api/admins', adminRoutes);  // ✅ FIX: Now it's explicitly under `/api/users`
 app.use('/api/sales', salesRoutes);
 
